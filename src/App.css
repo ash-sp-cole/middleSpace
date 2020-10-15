@@ -3,13 +3,12 @@
   height: 100%;
   width: 99%;
   margin:auto;
-
-
-
-
+ 
 }
-
-
+#root {
+ 
+  color:#2F4F4F;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

@@ -1,24 +1,26 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import "fontsource-roboto";
-
-const Header = () =>{
+import logo from "../../Media/logo.png";
+const Header = () => {
 
     return (
 
 
-            <div>
+        <div>
+            <img src={logo}
+                style={{
+                        height:'50ch',
+                        width:'50ch'
 
-
-<Typography variant="h1" component="h2">
- The Middle Space
-</Typography>
-
-            </div>
+                }}
+            
+            ></img>
+        </div>
 
     )
 
-    }
+}
 
 
 export default Header;
