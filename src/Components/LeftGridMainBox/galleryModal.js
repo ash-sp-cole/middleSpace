@@ -1,55 +1,65 @@
-import React, { useState } from 'react';
-import homeImage from "../../Media/introLeft.png";
-import Button from "@material-ui/core/Button";
-import { makeStyles } from '@material-ui/core/styles';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ImageIcon from '@material-ui/icons/Image';
-import imageMenu from "../../Media/imageMenu.png";
-import aboutImage from "../../Media/aboutImage.png";
-import MissionModal from "./missionModal";
-import WhoModal from "./whoWeAreModal";
-import { ButtonBase } from "@material-ui/core";
-import {
-  Dialog, DialogTitle, Divider, DialogContentText, DialogContent, CardHeader,
-  Card, Typography, DialogActions, IconButton, CardContent, CardActions
-} from "@material-ui/core";
+import React from 'react';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import ImageGrid from "./ImageGrid";
+import Paper from "@material-ui/core/Paper";
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import { red } from '@material-ui/core/colors';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { makeStyles } from '@material-ui/core/styles';
 import ImageGridLastStand from "./ImageGridLastStand";
-import MissionBanner from "../../Media/aboutImage.png";
-import CardMedia from '@material-ui/core/CardMedia';
-import Tooltip from "@material-ui/core/Tooltip";
-import MediaCard from "./whoWeAreModal";
-
-
+import Divider from "@material-ui/core/Divider";
+import galleryModal from "../../Media/imageMenu.png";
+import { ButtonBase } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    margin: 'auto',
+    marginBottom: '5%'
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '56.25%',
+    // 16:9
   },
-  expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
+  card: {
+    margin: 'auto',
+    width: '85%'
+
+
   },
+
+
   expandOpen: {
     transform: 'rotate(180deg)',
-  }
-  
+  },
+  avatar: {
+    backgroundColor: red[500],
+  },
 }));
 
-const MenuPropDisplay = (props) => {
-  const classes = useStyles();
 
+
+
+export default function GalleryModal(props) {
   const [open, setOpen] = React.useState(false);
+
+  const classes = useStyles();
+  const [expanded, setExpanded] = React.useState(false);
+
+
 
 
   const handleClickOpen = () => {
@@ -63,22 +73,14 @@ const MenuPropDisplay = (props) => {
 
 
 
-  let value = props.MenuArray;
 
 
-
-
-
-  if (value === 0) return (
+  return (
     <div>
-      <Button onClick={handleClickOpen}>
-        <Tooltip title="Take a peek" placement="top" arrow>
-          <img src={imageMenu} />
-        </Tooltip>
-      </Button>
+
       <Button
         variant="contained"
-        color="primary"
+        color="secondary"
 
         onClick={handleClickOpen}
         style={{
@@ -87,9 +89,6 @@ const MenuPropDisplay = (props) => {
       >
         View our work
       </Button>
-
-
-
       <Dialog
         open={open}
         onClose={handleClose}
@@ -179,134 +178,21 @@ const MenuPropDisplay = (props) => {
 
 
           <br></br>
-
-
-        </DialogContent>
-        <DialogActions>
-
-          <Button onClick={handleClose} color="primary" autoFocus>
-            Close
-          </Button>
-        </DialogActions>
-      </Dialog>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-  )
-
-
-
-
-
-  else if (value === 2) {
-    return (
-      <div>
-
-        <Button onClick={handleClickOpen}>
-          <Tooltip title="About us" placement="top" arrow>
-            <img src={aboutImage} />
-          </Tooltip>
-        </Button> 
-
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleClickOpen}
-          style={{
-            marginTop: '-20%'
-          }}
-        >
-          Who we are
-          </Button>
-
-        <Dialog
-          open={open}
-          onClose={handleClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-        >
-         
-          <DialogContent>
-          <Divider/>
-          
-        <MediaCard/>
-          </DialogContent>
-          <DialogActions>
-           
-            <Button onClick={handleClose} color="primary" autoFocus>
-              Close
-          </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
-    )
-  }
-
-
-
-
-  else return (
-    <div>
-      <Button onClick={handleClickOpen}>
-      <Tooltip title="What we're passionate about " placement="top" arrow>
-        <img src={homeImage} />
-        </Tooltip>
-      </Button>
-      <Button
-        style={{
-          marginTop: '-20%'
-        }}
-        variant="contained"
-        color="primary"
-
-        onClick={handleClickOpen}
-      >
-        our mission
-      </Button>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{"The Middle Space"}</DialogTitle>
-        <DialogContent>
-          <Card className={classes.root} elevation={7}>
+          {/* <Paper elevation={14}>
+          <Card className={classes.card}>
             <CardHeader
 
-              title="Our Mission"
-              subheader="finding your voice"
+              title="Local Businesses"
+              subheader="Your personal touch online"
             />
-            <CardMedia
-              className={classes.media}
-              image={MissionBanner}
-              title="The Middle Space"
-            />
+            <ImageGridLastStand/>
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
-              Life changes fast and anybody with a quick Google search can see how far technology has developed
-                in the past month , let alone the past year. Not every company has time to catch up or
-                begin figuring out what the best options are. At <strong>  The Middle Space  </strong>our aim is simple
-                . We strive to be a true <strong> non-profit </strong> creation platform. A place where <strong> regardless of budget </strong>
-                communities and businesses can find a meaningful digital presence.
+              Web development isn't always easy , in fact it's often very confusing. 
+              Our aim with “The Middle Space” is to create a way for every community to find their voice,
+               regardless of size or budget. Having worked passionately within the special needs
+                and Waldorf community for over a decade,
+               we aim to inspire many more to find their digital voice.
         </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -320,20 +206,22 @@ const MenuPropDisplay = (props) => {
                   <FacebookIcon />
                 </IconButton>
               </a>
-
+       
             </CardActions>
-
+          
           </Card>
+          </Paper>
+        */}
+
+
         </DialogContent>
         <DialogActions>
 
           <Button onClick={handleClose} color="primary" autoFocus>
-            close
+            Close
           </Button>
         </DialogActions>
       </Dialog>
     </div>
-  )
+  );
 }
-
-export default MenuPropDisplay;

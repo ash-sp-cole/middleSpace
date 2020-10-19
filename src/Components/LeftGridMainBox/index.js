@@ -9,10 +9,13 @@ import MenuPropDisplay from './menuPropDisplay';
 import { Menu } from '@material-ui/core';
 import ImageIcon from '@material-ui/icons/Image';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import Tooltip from '@material-ui/core/Tooltip';
+
 
 const useStyles = makeStyles({
   root: {
-   width:'auto'
+   width:'auto',
+   height:'100%'
   },
 });
 
@@ -54,11 +57,18 @@ state={
       
       }}
       showLabels
+      
      
     >
+       <Tooltip title="Gallery" placement="top" arrow>
       <BottomNavigationAction label="" icon={<ImageIcon/>} />
+      </Tooltip>
+      <Tooltip title="Home" placement="top" arrow>
       <BottomNavigationAction label="" icon={<FavoriteIcon />} />
+      </Tooltip>
+      <Tooltip title="About us" placement="top" arrow>
       <BottomNavigationAction label="" icon={<AccountBoxIcon />} />
+      </Tooltip>
     </BottomNavigation>
     </div>
   );

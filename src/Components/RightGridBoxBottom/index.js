@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import { Typography } from "@material-ui/core";
 import TwitterIcon from '@material-ui/icons/Twitter';
 import IconButton from "@material-ui/core/IconButton";
@@ -10,11 +9,17 @@ const RightGridBoxBottom = () =>{
            <Typography variant="h5" gutterBottom>
             Easy to use custom built Frameworks 
       </Typography> 
+      <a href="https://twitter.com/TheMiddleSpace1" target="_blank" rel="noopener noreferrer">
       <IconButton aria-label="delete">
   <TwitterIcon />
-</IconButton><IconButton aria-label="delete">
+</IconButton>
+</a>
+<a href="https://github.com/ash-sp-cole" target="_blank" rel="noopener noreferrer">
+<IconButton aria-label="delete">
   <GitHubIcon />
 </IconButton>
+</a>
+
         </div>
     )
 }

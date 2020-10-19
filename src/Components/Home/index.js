@@ -47,6 +47,11 @@ export default function SimpleContainer() {
 
   const classes = useStyles();
 
+  const handleLanguageChange = () =>{
+    console.log("Deutsch")
+  }
+
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -72,19 +77,26 @@ export default function SimpleContainer() {
             ><RightGridBoxBottom /></Paper>
           </Grid>
           <Grid item xs={12}
-          style={{opacity:'0.8'}}
-          > 
+            style={{ opacity: '0.8' }}
+          >
             <Paper
               className={classes.paper} className={classes.header}
               elevation={10}
-              style={{borderRadius:'15px'}}
+              style={{ borderRadius: '15px' }}
             >
 
 
               2020 All Rights Reserver - The Middle Space -
-<Fab variant="extended" style={{ marginLeft: '9%' }} > 
-                <CopyrightIcon className={classes.extendedIcon} style={{ margin:'auto' }} />
+<Fab variant="extended" style={{ marginLeft: '9%' }} >
+                <CopyrightIcon className={classes.extendedIcon} style={{ margin: 'auto' }} />
 
+
+              </Fab>
+              <Fab variant="extended" style={{ marginLeft: '1%' }} 
+              onClick={handleLanguageChange}
+              >
+               
+                Deutsch
 
               </Fab>
             </Paper>

@@ -9,7 +9,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import FullWidthGrid from "./grid";
 import voiceImage from "../../Media/voice.png";
 import Grid from "@material-ui/core/Grid";
-
+import Tooltip from '@material-ui/core/Tooltip';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 
 const RightGridBoxTop = () => {
@@ -29,8 +30,8 @@ const RightGridBoxTop = () => {
       <Grid container spacing={3}>
      
         <Grid item xs={12}>
-
-
+        <Tooltip title="Click me" placement="top" arrow>
+          <Button    style={{ backgroundColor: 'transparent' }}onClick={handleClickOpen} >
           <img src={voiceImage}
             style={{
               height:'auto',
@@ -38,7 +39,8 @@ const RightGridBoxTop = () => {
               margin: 'auto'
             }}
           />
-
+        </Button>
+        </Tooltip>
         </Grid>
         <Grid item xs={12}>
 
