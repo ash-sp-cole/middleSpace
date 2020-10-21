@@ -6,8 +6,11 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import Axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
-
+import Alert from '@material-ui/lab/Alert';
+import CheckIcon from '@material-ui/icons/Check';
+import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +34,32 @@ export default function Email() {
     setOpen(false);
   };
 
- 
+  const handleEmailSend = (event) => {
+    event.preventDefault();
+    const email = document.getElementById("email").value
+    const name = document.getElementById("name").value
+    const content = document.getElementById("message").value
+
+    if (name === "") { alert("please enter a valid name") }
+    if (email === "") { alert("please enter a valid email") }
+    if (content === "") { alert("please enter a valid message") }
+
+    Axios.post("http://localhost:3001/send", {
+
+      name: name,
+      email: email,
+      message: content
+
+    })
+      .then(function (response) {
+        console.log(response)
+        alert("works")
+      })
+      .then(function (error) {
+        console.log(error)
+      })
+
+  }
 
   return (
     <div>
@@ -39,6 +67,7 @@ export default function Email() {
         Contact us
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+
         <DialogTitle id="form-dialog-title">Send us an email</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -47,31 +76,31 @@ export default function Email() {
             <br></br>
             We look forward to hearing from you.
           </DialogContentText>
+
           <TextField
-          id="outlined-textarea"
-          label="Name"
-          placeholder="What shall we call you?"
-          multiline
-          variant="outlined"
-          autoFocus
-          style={{width:'100%'}}
-        />
-         <br></br>
-            <br></br>
-          <TextField
-          id="outlined-textarea"
-          label="Quick Thoughts"
-          placeholder="What can we help you with?"
-          multiline
-          variant="outlined"
-          style={{width:'100%'}}
-        />
-         <br></br>
-            <br></br>
-          <TextField
-            
-            margin="dense"
+
             id="name"
+            placeholder="What shall we call you?"
+            multiline
+            variant="outlined"
+            autoFocus
+            style={{ width: '100%' }}
+          />
+          <br></br>
+          <br></br>
+          <TextField
+            id="message"
+            label="Quick Thoughts"
+            placeholder="What can we help you with?"
+            multiline
+            variant="outlined"
+            style={{ width: '100%' }}
+          />
+          <br></br>
+          <br></br>
+          <TextField
+            margin="dense"
+            id="email"
             label="Email Address"
             type="email"
             variant="outlined"
@@ -79,13 +108,15 @@ export default function Email() {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleEmailSend} type="submit" color="primary">
             Cancel
           </Button>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleEmailSend} color="primary">
             send it
           </Button>
+
         </DialogActions>
+
       </Dialog>
     </div>
   );
