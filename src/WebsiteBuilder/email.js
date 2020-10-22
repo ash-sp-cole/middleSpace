@@ -54,6 +54,7 @@ export default function Email() {
       .then(function (response) {
         console.log(response)
         alert("works")
+        handleClose()
       })
       .then(function (error) {
         console.log(error)
@@ -108,7 +109,7 @@ export default function Email() {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleEmailSend} type="submit" color="primary">
+          <Button onClick={handleClose} type="submit" color="primary">
             Cancel
           </Button>
           <Button onClick={handleEmailSend} color="primary">

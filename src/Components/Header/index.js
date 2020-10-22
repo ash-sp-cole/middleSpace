@@ -8,10 +8,10 @@ const Header = () => {
 
 
         <div>
-            <img src={logo}
+            <img id="logo" src={logo}
                 style={{
-                        height:'50ch',
-                        width:'50ch'
+                        maxHeight:'60ch',
+                      maxWidth:'65ch'
 
                 }}
             
