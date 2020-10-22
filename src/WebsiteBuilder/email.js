@@ -44,7 +44,7 @@ export default function Email() {
     if (email === "") { alert("please enter a valid email") }
     if (content === "") { alert("please enter a valid message") }
 
-    Axios.post("http://localhost:3001/send", {
+    Axios.post("/send", {
 
       name: name,
       email: email,
@@ -72,7 +72,7 @@ export default function Email() {
         <DialogTitle id="form-dialog-title">Send us an email</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To find out more about how we can help you, regardless of budget. Drop  a quick email with a little about your situation.
+            To find out more about how we can help you, regardless of budget! Drop  a quick email with a little about your situation.
             <br></br>
             <br></br>
             We look forward to hearing from you.

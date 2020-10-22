@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bb38f0b4.chunk.css",
+    "main.js": "/static/js/main.79b7ed03.chunk.js",
+    "main.js.map": "/static/js/main.79b7ed03.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.507db7c9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.507db7c9.js.map",
+    "static/css/2.f59af41a.chunk.css": "/static/css/2.f59af41a.chunk.css",
+    "static/js/2.b641a99f.chunk.js": "/static/js/2.b641a99f.chunk.js",
+    "static/js/2.b641a99f.chunk.js.map": "/static/js/2.b641a99f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c863e6fb313374a30a2499284c405f34.js": "/precache-manifest.c863e6fb313374a30a2499284c405f34.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.f59af41a.chunk.css.map": "/static/css/2.f59af41a.chunk.css.map",
+    "static/css/main.bb38f0b4.chunk.css.map": "/static/css/main.bb38f0b4.chunk.css.map",
+    "static/js/2.b641a99f.chunk.js.LICENSE.txt": "/static/js/2.b641a99f.chunk.js.LICENSE.txt",
+    "static/media/aboutImage.png": "/static/media/aboutImage.5c24616e.png",
+    "static/media/aboutLastStand.JPG": "/static/media/aboutLastStand.3cae642d.JPG",
+    "static/media/beerLastStand.JPG": "/static/media/beerLastStand.2380983b.JPG",
+    "static/media/createLogo.png": "/static/media/createLogo.25c532ee.png",
+    "static/media/styles.css": "/static/media/flowerBackground.09425e4c.png",
+    "static/media/homeLastStand.JPG": "/static/media/homeLastStand.a0b81dfb.JPG",
+    "static/media/style.css": "/static/media/homeScreen.726008eb.JPG",
+    "static/media/imageMenu.png": "/static/media/imageMenu.33cfb023.png",
+    "static/media/introLeft.png": "/static/media/introLeft.080682dd.png",
+    "static/media/logo.png": "/static/media/logo.a5c96433.png",
+    "static/media/menuLastStand.JPG": "/static/media/menuLastStand.dad1dd9d.JPG",
+    "static/media/index.css": "/static/media/roboto-vietnamese-400-normal.a8be5b46.woff2",
+    "static/media/rudolfModal.JPG": "/static/media/rudolfModal.88aaed98.JPG",
+    "static/media/self.png": "/static/media/self.a2b383f1.png",
+    "static/media/voice.png": "/static/media/voice.7c65007d.png",
+    "static/media/worldModal.JPG": "/static/media/worldModal.b5d78836.JPG",
+    "static/media/worldResponse.JPG": "/static/media/worldResponse.bb6155ea.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.507db7c9.js",
+    "static/css/2.f59af41a.chunk.css",
+    "static/js/2.b641a99f.chunk.js",
+    "static/css/main.bb38f0b4.chunk.css",
+    "static/js/main.79b7ed03.chunk.js"
+  ]
+}
