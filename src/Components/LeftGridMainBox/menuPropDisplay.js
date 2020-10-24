@@ -2,20 +2,14 @@ import React, { useState } from 'react';
 import homeImage from "../../Media/introLeft.png";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ImageIcon from '@material-ui/icons/Image';
 import imageMenu from "../../Media/imageMenu.png";
 import aboutImage from "../../Media/aboutImage.png";
-import MissionModal from "./missionModal";
-import WhoModal from "./whoWeAreModal";
-import { ButtonBase } from "@material-ui/core";
 import {
   Dialog, DialogTitle, Divider, DialogContentText, DialogContent, CardHeader,
   Card, Typography, DialogActions, IconButton, CardContent, CardActions
 } from "@material-ui/core";
 import ImageGrid from "./ImageGrid";
 import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import ImageGridLastStand from "./ImageGridLastStand";
 import MissionBanner from "../../Media/aboutImage.png";
 import CardMedia from '@material-ui/core/CardMedia';

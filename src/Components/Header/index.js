@@ -1,5 +1,4 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import "fontsource-roboto";
 import logo from "../../Media/logo.png";
 const Header = () => {
@@ -8,7 +7,7 @@ const Header = () => {
 
 
         <div>
-            <img id="logo" src={logo}
+            <img id="logo" alt="logo" src={logo}
                 style={{
                         maxHeight:'60ch',
                       maxWidth:'65ch'

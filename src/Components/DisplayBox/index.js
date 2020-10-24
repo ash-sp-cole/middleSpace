@@ -1,7 +1,6 @@
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import React from "react";
-import homeScreen from "../../Media/homeScreen.JPG";
 import Button from "@material-ui/core/Button";
 
 import "./style.css"; 

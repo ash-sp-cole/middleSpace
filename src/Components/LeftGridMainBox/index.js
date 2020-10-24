@@ -1,23 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import RestoreIcon from '@material-ui/icons/Restore';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 import MenuPropDisplay from './menuPropDisplay';
-import { Menu } from '@material-ui/core';
 import ImageIcon from '@material-ui/icons/Image';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Tooltip from '@material-ui/core/Tooltip';
 
 
-const useStyles = makeStyles({
-  root: {
-   width:'auto',
-   height:'100%'
-  },
-});
 
 
 

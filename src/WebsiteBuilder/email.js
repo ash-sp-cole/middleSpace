@@ -25,8 +25,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function Email() {
+export default function Email(props) {
   const [open, setOpen] = React.useState(false);
+
+  console.log(props.reference)
 
   const handleClickOpen = () => {
     setOpen(true);

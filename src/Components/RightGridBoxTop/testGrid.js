@@ -8,7 +8,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
 import "./styles.css";
 import logo from "../../Media/createLogo.png";
 import Email from "../../WebsiteBuilder/email";
@@ -111,7 +110,7 @@ const TestGrid = () => {
             </CardContent>
             <CardActions style={{ margin: 'auto' }}>
               <Grid item xs={12} style={{ margin: 'auto' }}>
-                <Email />
+                <Email reference="donation"/>
               </Grid>
             </CardActions>
 
@@ -164,7 +163,7 @@ const TestGrid = () => {
             </CardContent>
             <CardActions style={{ margin: 'auto' }}>
               <Grid item xs={12} style={{ margin: 'auto' }}>
-                <Email />
+                <Email  />
               </Grid>
             </CardActions>
 
