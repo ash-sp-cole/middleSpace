@@ -89,6 +89,7 @@ export default function MissionModal() {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        maxWidth="lg"
       >
         <DialogTitle id="alert-dialog-title">{"The Middle Space"}</DialogTitle>
         <DialogContent>

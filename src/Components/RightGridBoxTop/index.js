@@ -11,6 +11,7 @@ import voiceImage from "../../Media/voice.png";
 import Grid from "@material-ui/core/Grid";
 import Tooltip from '@material-ui/core/Tooltip';
 import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import TestGrid from "./testGrid";
 
 
 const RightGridBoxTop = () => {
@@ -47,7 +48,7 @@ const RightGridBoxTop = () => {
           <Button variant="contained" color="secondary" onClick={handleClickOpen}
           style={{marginTop:'-20%'}}
           >
-            Learn more
+            Create your site
 </Button>
 
 
@@ -56,6 +57,7 @@ const RightGridBoxTop = () => {
       </Grid>
       <Dialog
         open={open}
+          maxWidth="lg"
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
@@ -63,7 +65,7 @@ const RightGridBoxTop = () => {
         <DialogTitle id="alert-dialog-title">{" It's our aim to help you represent yourself, no matter the budget"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            <FullWidthGrid />
+            <TestGrid/>
           </DialogContentText>
         </DialogContent>
         <DialogActions>

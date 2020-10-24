@@ -7,7 +7,7 @@ const RightGridBoxBottom = () =>{
     return(
         <div>
            <Typography variant="h5" gutterBottom>
-            Easy to use custom built Frameworks 
+            A True <strong> non-profit </strong> creation platform
       </Typography> 
       <a href="https://twitter.com/TheMiddleSpace1" target="_blank" rel="noopener noreferrer">
       <IconButton aria-label="delete">

@@ -11,7 +11,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Alert from '@material-ui/lab/Alert';
 import CheckIcon from '@material-ui/icons/Check';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
-
+import { init } from 'emailjs-com';
+import emailjs from "emailjs-com";
+init("user_GCxOxnSXR9pFWVfEN7OLA");
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,31 +38,34 @@ export default function Email() {
 
   const handleEmailSend = (event) => {
     event.preventDefault();
-    const email = document.getElementById("email").value
-    const name = document.getElementById("name").value
-    const content = document.getElementById("message").value
+    const emailValue = document.getElementById("email").value
+    const nameValue = document.getElementById("name").value
+    const contentValue = document.getElementById("message").value
 
-    if (name === "") { alert("please enter a valid name") }
-    if (email === "") { alert("please enter a valid email") }
-    if (content === "") { alert("please enter a valid message") }
+    if (nameValue === "") { alert("please enter a valid name") }
+    if (emailValue === "") { alert("please enter a valid email") }
+    if (contentValue === "") { alert("please enter a valid message") }
 
-    Axios.post("/send", {
+    let data = {
 
-      name: name,
-      email: email,
-      message: content
+      email : emailValue,
+      name: nameValue,
+      content : contentValue
 
-    })
+    }
+
+    emailjs.send('default_service', 'template_94yxg39', data)
       .then(function (response) {
-        console.log(response)
-        alert("works")
-        handleClose()
-      })
-      .then(function (error) {
-        console.log(error)
-      })
+        console.log('SUCCESS!', response.status, response.text);
+      }, function (error) {
+        console.log('FAILED...', error);
+      });
+
+
 
   }
+
+
 
   return (
     <div>
@@ -81,7 +86,7 @@ export default function Email() {
           <TextField
 
             id="name"
-            placeholder="What shall we call you?"
+            placeholder="Your full name"
             multiline
             variant="outlined"
             autoFocus
@@ -91,7 +96,7 @@ export default function Email() {
           <br></br>
           <TextField
             id="message"
-            label="Quick Thoughts"
+            label="Thoughts and wishes"
             placeholder="What can we help you with?"
             multiline
             variant="outlined"

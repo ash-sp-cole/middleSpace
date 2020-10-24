@@ -58,7 +58,7 @@ export default function SimpleContainer() {
       <Container>
         <Grid container spacing={3}>
 
-          <Grid item xs={12} style={{ mariginTop: '20%', opacity: '0.6' }}>
+          <Grid item xs={12} style={{ mariginTop: '20%', opacity: '0.75' }}>
             <Paper className={classes.paper} style={{ borderRadius: '25px' }} className={classes.header} elevation={14}><Header /></Paper>
           </Grid>
 

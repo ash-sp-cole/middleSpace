@@ -128,11 +128,7 @@ const MenuPropDisplay = (props) => {
                   <TwitterIcon />
                 </IconButton>
               </a>
-              <a href="https://twitter.com/TheMiddleSpace1" target="_blank" rel="noreferrer">
-                <IconButton aria-label="delete">
-                  <FacebookIcon />
-                </IconButton>
-              </a>
+       
 
             </CardActions>
 
@@ -167,11 +163,7 @@ const MenuPropDisplay = (props) => {
                   <TwitterIcon />
                 </IconButton>
               </a>
-              <a href="https://twitter.com/TheMiddleSpace1" target="_blank" rel="noreferrer">
-                <IconButton aria-label="delete">
-                  <FacebookIcon />
-                </IconButton>
-              </a>
+          
 
             </CardActions>
 
@@ -286,6 +278,7 @@ const MenuPropDisplay = (props) => {
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        maxWidth="lg"
       >
         <DialogTitle id="alert-dialog-title">{"The Middle Space"}</DialogTitle>
         <DialogContent>
@@ -301,13 +294,27 @@ const MenuPropDisplay = (props) => {
               title="The Middle Space"
             />
             <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-              Life changes fast and anybody with a quick Google search can see how far technology has developed
+            <Typography variant="h6" gutterBottom style={{margin:'auto'}}>
+            Life changes fast 
+      </Typography>
+              <Typography variant="body1" color="textSecondary" gutterBottom style={{
+                marginTop: '2%', marginBottom: '2%'
+              }}>
+                  Anybody with a quick Google search can see how far technology has developed
                 in the past month , let alone the past year. Not every company has time to catch up or
-                begin figuring out what the best options are. At <strong>  The Middle Space  </strong>our aim is simple
+                begin figuring out what the best options are.<br></br>
+      </Typography>
+              <Typography variant="body1" color="textSecondary" component="p">
+            
+                <Divider style={{
+                  marginTop: '2%', marginBottom: '2%'
+                }}
+                />
+               At <strong>  The Middle Space  </strong>our aim is simple
                 . We strive to be a true <strong> non-profit </strong> creation platform. A place where <strong> regardless of budget </strong>
                 communities and businesses can find a meaningful digital presence.
         </Typography>
+         
             </CardContent>
             <CardActions disableSpacing>
               <a href="https://twitter.com/TheMiddleSpace1" target="_blank" rel="noreferrer">
@@ -315,11 +322,7 @@ const MenuPropDisplay = (props) => {
                   <TwitterIcon />
                 </IconButton>
               </a>
-              <a href="https://twitter.com/TheMiddleSpace1" target="_blank" rel="noreferrer">
-                <IconButton aria-label="delete">
-                  <FacebookIcon />
-                </IconButton>
-              </a>
+             
 
             </CardActions>
 
