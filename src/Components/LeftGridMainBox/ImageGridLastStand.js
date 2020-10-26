@@ -23,13 +23,6 @@ const IMAGES =
         caption: "Responsive web design customized together"
      
 },
-{
-    src: menuLast,
-    thumbnail: menuLast,
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    caption: "Informative and simple"
-},
 
 {
         src: beerLast,
@@ -38,6 +31,15 @@ const IMAGES =
         thumbnailHeight: 212,
         caption: "Personal and inviting"
 },
+{
+    src: menuLast,
+    thumbnail: menuLast,
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    caption: "Informative and simple"
+},
+
+
 
 ]
 

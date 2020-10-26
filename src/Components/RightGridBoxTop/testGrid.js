@@ -17,6 +17,7 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import DoneIcon from '@material-ui/icons/Done';
 import OfflinePinIcon from '@material-ui/icons/OfflinePin';
 import buyLogo from "../../Media/logo.png";
+import helpLogo from "../../Media/introLeft.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,7 +45,13 @@ const TestGrid = () => {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper} elevation={7} style={{ borderRadius: '25px' }} >
-            <Typography variant="h6" gutterBottom>
+          <CardMedia
+        className={classes.media}
+        image={helpLogo}
+        title="help"
+      />
+        <Divider style={{ marginTop: '2%' }}></Divider>
+            <Typography variant="h6" gutterBottom style={{ marginTop: '1%' }}>
               All of our sites are built using the best technology, we exclusively use  <strong> React  </strong>for our front end development. <br></br>This enables us to
                 create, <strong> custom , responsive</strong> and <strong> state of the art</strong> websites for you.<br>
               </br>

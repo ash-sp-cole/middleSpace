@@ -15,6 +15,9 @@ import { init } from 'emailjs-com';
 import emailjs from "emailjs-com";
 init("user_GCxOxnSXR9pFWVfEN7OLA");
 
+
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Email(props) {
   const [open, setOpen] = React.useState(false);
 
-  console.log(props.reference)
+ 
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -44,29 +47,36 @@ export default function Email(props) {
     const nameValue = document.getElementById("name").value
     const contentValue = document.getElementById("message").value
 
-    if (nameValue === "") { alert("please enter a valid name") }
-    if (emailValue === "") { alert("please enter a valid email") }
-    if (contentValue === "") { alert("please enter a valid message") }
 
-    let data = {
 
-      email : emailValue,
-      name: nameValue,
-      content : contentValue
+
+
+
+    if (nameValue != "" & emailValue != "") {
+
+      let data = {
+
+        email: emailValue,
+        name: nameValue,
+        content: contentValue
+
+      }
+
+      emailjs.send('default_service', 'template_94yxg39', data)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert("your request has been sent , thank you")
+          handleClose()
+        }, function (error) {
+          console.log('FAILED...', error);
+        });
 
     }
 
-    emailjs.send('default_service', 'template_94yxg39', data)
-      .then(function (response) {
-        console.log('SUCCESS!', response.status, response.text);
-      }, function (error) {
-        console.log('FAILED...', error);
-      });
-
-
-
+    else {
+      alert("please check your submission for errors , name and email must be filled out")
+    }
   }
-
 
 
   return (
@@ -82,6 +92,7 @@ export default function Email(props) {
             To find out more about how we can help you, regardless of budget! Drop  a quick email with a little about your situation.
             <br></br>
             <br></br>
+            <strong >   Please state which package you are interested in.  </strong>
             We look forward to hearing from you.
           </DialogContentText>
 

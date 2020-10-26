@@ -57,7 +57,7 @@ export default function SimpleContainer() {
       <Container>
         <Grid container spacing={3}>
 
-          <Grid item xs={12} style={{ mariginTop: '20%', opacity: '0.75' }}>
+          <Grid item xs={12} style={{ mariginTop: '20%', opacity: '0.9' }}>
             <Paper className={classes.paper} style={{ borderRadius: '25px' }} className={classes.header} elevation={14}><Header /></Paper>
           </Grid>
 
@@ -68,11 +68,11 @@ export default function SimpleContainer() {
             style={{ margin: 'auto' }}
           >
             <Paper className={classes.paper} elevation={14}
-              style={{ borderRadius: '25px', opacity: '0.9' }}
+              style={{ borderRadius: '25px' }}
             ><RightGridBoxTop /></Paper>
             <br></br>
             <Paper className={classes.paper} elevation={14}
-              style={{ borderRadius: '25px', opacity: '0.9' }}
+              style={{ borderRadius: '25px' }}
             ><RightGridBoxBottom /></Paper>
           </Grid>
           <Grid item xs={12}
