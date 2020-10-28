@@ -85,7 +85,7 @@ export default function SimpleContainer() {
             >
 
 
-              2020 All Rights Reserver - The Middle Space -
+              2020 All rights reserved - The Middle Space -
 <Fab variant="extended" style={{ marginLeft: '9%' }} >
                 <CopyrightIcon className={classes.extendedIcon} style={{ margin: 'auto' }} />
 

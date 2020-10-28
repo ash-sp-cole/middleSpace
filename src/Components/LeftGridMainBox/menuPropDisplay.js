@@ -144,7 +144,7 @@ const MenuPropDisplay = (props) => {
             <CardContent>
 
               <Typography variant="body2" color="textSecondary" component="p" >
-                Helping you buisness find its path online, whether your an established company or a grass roots movement. Creating an online
+                Helping your buisness find its path online, whether your an established company or a grass roots movement. Creating an online
              presence can help you find a larger voice.<br></br>
              Within just a few months , sites like these can greatly improve sales, brand connection and understanding of your mission.
 
